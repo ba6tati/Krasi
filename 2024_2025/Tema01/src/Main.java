@@ -1,20 +1,11 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    public static void main(String[] args) {
-        Car car1 = new Car("BMW", "e36", (short) 1994);
-        System.out.println(car1.year);
-    }
-}
+    public static void main(String[] args) throws Exception {
+        Student student1 = new Student();
+        Student student2 = new Student(21115, "Kristian", "Djenev");
+        Student student3 = new Student(21124, "Svetoslav", "Trifonov");
 
-class Car {
-    String brand;
-    String model;
-    short year;
-
-    public Car(String brand, String model, short year) {
-        this.brand = brand;
-        this.model = model;
-        this.year = year;
+        System.out.println(student1);
+        System.out.println(student2);
+        System.out.println(student3);
     }
 }

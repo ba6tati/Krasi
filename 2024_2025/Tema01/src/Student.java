@@ -17,7 +17,7 @@ public class Student {
 
     @Override
     public String toString() {
-        return firstName + " " + lastName;
+        return courseNumber + " " + firstName + " " + lastName;
     }
 
     public int getCourseNumber() {

@@ -110,4 +110,23 @@ public class DatabaseBookRepository implements BookRepository {
         Book book = new Book(doc.getString("title"), doc.getString("author"), doc.getString("isbn"), doc.getInteger("yearPublished"));
         return book;
     }
+
+    public List<Book> getAllBooks() {
+        List<Book> books = new ArrayList<Book>();
+
+        List<Document> documents = collection.find().into(new ArrayList<>());
+
+        for (Document doc : documents) {
+            Book book = new Book(
+                doc.getString("title"), 
+                doc.getString("author"),
+                doc.getString("isbn"),
+                doc.getInteger("yearPublished")
+            );
+
+            books.add(book);
+        }
+
+        return books;
+    }
 }

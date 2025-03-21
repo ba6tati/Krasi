@@ -48,6 +48,6 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book (title=" + getTitle() + ", author=" + getAuthor() + ", isbn=" + getIsbn() + ", yearPublished=" + getYearPublished() + ")";
+        return getTitle() + " (" +  getYearPublished() + "): " + getAuthor() + ". ISBN: [" + getIsbn() + "]";
     }
 }
